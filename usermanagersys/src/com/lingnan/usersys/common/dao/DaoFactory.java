@@ -3,6 +3,7 @@ package com.lingnan.usersys.common.dao;
 import java.sql.Connection;
 
 import com.lingnan.usersys.common.exception.ServiceException;
+import com.lingnan.usersys.usermgr.dao.UserDaoImpl;
 
 
 /**
@@ -24,10 +25,6 @@ public class DaoFactory {
 			//返回实例化的dao对象
 			return new UserDaoImpl(conn);
 		}
-//		else if ("order".equals(type)) {
-//			
-//		return new OrderDaoImpl(conn);
-//		}
 		//如果没有以上指定的类型匹配的值，就提示错误信息
 		else{
 			throw new ServiceException("dao工厂方法出错");

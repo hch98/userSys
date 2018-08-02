@@ -14,7 +14,7 @@ public class DBUtils {
 	
    /**
     * 数据库的连接方法
-    * @return
+    * @return 连接对象
     */
 	
 	public static Connection getConnection(){
@@ -39,15 +39,15 @@ public class DBUtils {
 			//e.printStackTrace();			
 		}
 		//返回得到的连接对象
-		return conn; 	}
+		return conn; 	
+		}
 	
 	
 	
 	/**
 	 * 开启事务
-	 * @param conn
+	 * @param conn 连接对象
 	 */
-	
 	public static void beginTransaction(Connection conn){
 		try{
 			//将事务的自动提交模式设为假
@@ -62,7 +62,7 @@ public class DBUtils {
 	
 	/**
 	 * 提交事务
-	 * @param conn
+	 * @param conn 连接对象
 	 */
 	
 	public static void commit(Connection conn){
@@ -81,7 +81,7 @@ public class DBUtils {
 	
 	/**
 	 * 回滚事务
-	 * @param conn
+	 * @param conn 连接对象
 	 */
 	
 	public static void rollback(Connection conn){
@@ -100,7 +100,7 @@ public class DBUtils {
 	
 	/**
 	 * 关闭连接
-	 * @param conn
+	 * @param conn 连接对象
 	 */
 	
 	public static void closeConnection(Connection conn){
@@ -119,8 +119,8 @@ public class DBUtils {
 	
 	/**
 	 * 关闭对象
-	 * @param rs
-	 * @param stmt
+	 * @param rs  结果集对象
+	 * @param stmt  处理对象
 	 */
 	
 	public static void closeStatement(ResultSet rs,Statement stmt){

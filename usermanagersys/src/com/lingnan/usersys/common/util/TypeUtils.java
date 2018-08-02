@@ -1,5 +1,6 @@
 package com.lingnan.usersys.common.util;
 import java.util.Date;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -55,8 +56,8 @@ public class TypeUtils {
 	
 	/**
 	 * 判断邮箱
-	 * @param email
-	 * @return
+	 * @param email 邮箱
+	 * @return true/false
 	 */
 	
 	public static boolean checkEmail(String email){
@@ -77,8 +78,8 @@ public class TypeUtils {
 	
 	/**
 	 * 验证手机号码
-	 * @param phone
-	 * @return
+	 * @param phone 联系号码
+	 * @return true/false
 	 */
 	public static boolean checkPhone(String phone){
 		try {
@@ -100,4 +101,5 @@ public class TypeUtils {
 			throw new PhoneException("号码格式错误",e);
 		}
 	}
+	
 }
